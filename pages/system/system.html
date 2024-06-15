@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-c system</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
+    <link rel="stylesheet" href="../../assets/css/system.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <button id="menu-btn" class="icon-btn btn">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <h2>connect-e system</h2>
+    </header>
+
+    <div class="sidebarmain">
+      <div class="sidebar bg-indigo">
+        <div class="sidebar-link selected">
+          <a href="">
+            <div class="icon-btn">
+              <span class="material-symbols-outlined">inventory_2</span>
+            </div>
+            <p>Productos</p>
+          </a>
+        </div>
+        <div class="sidebar-link">
+          <a href="">
+            <div class="icon-btn">
+              <span class="material-symbols-outlined">settings</span>
+            </div>
+            <p>Configuraciones</p>
+          </a>
+        </div>
+        <div class="sidebar-link">
+          <a href="/">
+            <div class="icon-btn">
+              <span class="material-symbols-outlined">logout</span>
+            </div>
+            <p>Salir</p>
+          </a>
+        </div>
+      </div>
+      <main id="main" class="main">
+        <h1 class="title">Tabla de productos</h1>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Marca</th>
+              <th>Precio</th>
+              <th>Categoría</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </main>
+    </div>
+    <button id="add-product-btn" class="add-product-btn bg-indigo btn">
+      +
+    </button>
+
+    <!-- modal crear producto -->
+
+    <div id="create-product-modal" class="modal hidden-element">
+      <button id="close-create-modal-btn" class="close-modal-btn">x</button>
+      <form action="" method="post" id="create-product-form">
+        <legend class="title text-center">Crear un nuevo producto</legend>
+        <label for="create-name" class="label">Nombre</label>
+        <input
+          type="text"
+          id="create-name"
+          name="productName"
+          class="input"
+          required
+        />
+        <label for="create-brand" class="label">Marca</label>
+        <input
+          type="text"
+          id="create-brand"
+          name="brand"
+          class="input"
+          required
+        />
+        <label for="create-price" class="label">Precio</label>
+        <input
+          type="text"
+          id="create-price"
+          name="price"
+          class="input"
+          required
+        />
+        <label for="create-category" class="label">Categoría</label>
+        <select id="create-category" name="category" class="select" required>
+          <option value="router">Router</option>
+          <option value="switch">Switch</option>
+          <option value="cable">Cable</option>
+          <option value="accessPoint">Access Point</option>
+          <option value="firewall">Firewall</option>
+          <option value="antena">Antena</option>
+          <option value="adaptador">Adaptador</option>
+        </select>
+        <label for="create-warranty" class="label">Garantía</label>
+        <input
+          type="text"
+          id="create-warranty"
+          name="warranty"
+          class="input"
+          required
+        />
+        <label for="create-description" class="label">Descripción</label>
+        <textarea
+          id="create-description"
+          class="input textarea tinymce"
+          name="description"
+        ></textarea>
+        <label for="create-uri-image" class="label">URL de Imágen</label>
+        <input
+          type="text"
+          id="create-uri-image"
+          name="uriImage"
+          class="input"
+          required
+        />
+        <button type="submit" class="submit btn bg-indigo">Publicar</button>
+      </form>
+    </div>
+
+    <!-- modal actualizar producto -->
+    <div id="update-product-modal" class="modal hidden-element">
+      <button id="close-update-modal-btn" class="close-modal-btn">x</button>
+      <form action="" method="post" id="update-product-form">
+        <legend class="title text-center">Actualizar producto</legend>
+        <label for="update-id" class="label">Id</label>
+        <input
+          type="text"
+          id="update-id"
+          name="productId"
+          class="input"
+          disabled
+          required
+        />
+        <label for="update-name" class="label">Nombre</label>
+        <input
+          type="text"
+          id="update-name"
+          name="productName"
+          class="input"
+          required
+        />
+        <label for="update-brand" class="label">Marca</label>
+        <input
+          type="text"
+          id="update-brand"
+          name="brand"
+          class="input"
+          required
+        />
+        <label for="update-price" class="label">Precio</label>
+        <input
+          type="text"
+          id="update-price"
+          name="price"
+          class="input"
+          required
+        />
+        <label for="update-category" class="label">Categoría</label>
+        <select id="create-category" name="category" class="select" required>
+          <option value="router">Router</option>
+          <option value="switch">Switch</option>
+          <option value="cable">Cable</option>
+          <option value="accessPoint">Access Point</option>
+          <option value="firewall">Firewall</option>
+          <option value="antena">Antena</option>
+          <option value="adaptador">Adaptador</option>
+        </select>
+        <label for="update-warranty" class="label">Garantía</label>
+        <input
+          type="text"
+          id="update-warranty"
+          name="warranty"
+          class="input"
+          required
+        />
+        <label for="update-description" class="label">Descripción</label>
+        <textarea
+          id="update-description"
+          class="input textarea tinymce"
+          name="description"
+        ></textarea>
+        <label for="update-uri-image" class="label">URL de Imágen</label>
+        <input
+          type="text"
+          id="update-uri-image"
+          name="uriImage"
+          class="input"
+          required
+        />
+        <img src="" alt="" />
+        <button type="submit" class="submit btn bg-indigo">Publicar</button>
+      </form>
+    </div>
+    <script type="module" src="system.js"></script>
+  </body>
+</html>

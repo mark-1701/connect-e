@@ -1,0 +1,320 @@
+:root {
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44836;
+  --background: #1d1f20;
+  --primary-color: #c8c9cb;
+  --second-color: #ededed;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* box sizing */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* gerenal styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ************************** components ************************** */
+
+.section {
+  padding: 0 3rem;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  display: block;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 1.5px solid lightgray;
+}
+
+.select {
+  display: block;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  border: 1.5px solid lightgray;
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.submit {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.textarea {
+  resize: none;
+  height: 6rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background-color: #e5e5e5;
+}
+
+.table td,
+th {
+  padding: 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.table tr:hover {
+  background-color: #f3f3f3;
+}
+
+/* método extra */
+.table tr {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.icon-table-btn {
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
+
+/* **************************** others **************************** */
+.bg-gray {
+  background-color: #e5e5e5;
+  color: #000;
+}
+
+.bg-green {
+  background-color: #10b981;
+  color: #fff;
+}
+
+.bg-indigo {
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+.bg-orange {
+  background-color: #f97316;
+  color: #fff;
+}
+
+.bg-red {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+/* ************************** components ************************** */
+.add-product-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+
+/* **************************** others **************************** */
+.bg-gray {
+  background-color: #e5e5e5;
+  color: #000;
+}
+
+.bg-green {
+  background-color: #15803d;
+  color: #fff;
+}
+
+.bg-indigo {
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+.bg-purple {
+  background-color: #6b21a8;
+  color: #fff;
+}
+
+/* *************************** header **************************** */
+
+.icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 4rem;
+  background-color: #f3f4f6;
+}
+
+/* *************************** sidebar **************************** */
+
+.sidebar {
+  width: 25%;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.sidebar-disabled {
+  width: 4rem;
+}
+
+.sidebar-link a {
+  display: flex;
+  align-items: center;
+  min-width: 24rem;
+  width: 100%;
+  height: 4rem;
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.sidebar-link:hover {
+  background-color: #6366f1;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #6366f1;
+}
+
+.main {
+  width: 100%;
+  padding: 2rem;
+  overflow: auto;
+}
+
+.sidebarmain {
+  width: 100%;
+  height: calc(100vh - 4rem);
+  display: flex;
+  overflow: hidden;
+}
+
+/* *************************** modal **************************** */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 4rem;
+  background-color: #29252479;
+}
+
+.close-modal-btn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.modal form {
+  background-color: white;
+  width: 50%;
+  overflow: auto;
+  padding: 2rem;
+}
+
+/* ************************************************************** */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+@media (max-width: 600px) {
+  .main {
+    margin-left: 0;
+  }
+  .sidebar {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 0;
+    height: 100%;
+  }
+  .sidebar-disabled {
+    width: 70%;
+  }
+  .modal {
+    padding: 4rem 2rem 2rem;
+  }
+  .modal form {
+    width: 100%;
+  }
+  .close-btn-modal {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+.hidden-element {
+  display: none;
+}
